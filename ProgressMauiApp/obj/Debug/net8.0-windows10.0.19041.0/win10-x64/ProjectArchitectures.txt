@@ -1,0 +1,1 @@
+C:\Users\Сергей Старченко\Desktop\ProgressMauiApp\ProgressMauiApp\ProgressMauiApp.csproj;x64

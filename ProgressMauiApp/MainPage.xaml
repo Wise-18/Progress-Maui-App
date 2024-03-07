@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ProgressMauiApp"
+             x:Class="ProgressMauiApp.MainPage">
+
+    <ScrollView>
+
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Button HorizontalOptions="Start" x:Name="btn_converter" Clicked="btn_converter_Clicked" Text="Конвертер валют"/>
+
+            <Label x:Name="lbl_title"  Text="Welcome to .NET MAUI!" Style="{StaticResource SubHeadline}" SemanticProperties.HeadingLevel="Level1"/>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                <ProgressBar x:Name="progress_bar" WidthRequest="200" HeightRequest="30"/>
+                <Label Text="{Binding Source={x:Reference progress_bar}, Path=Progress, StringFormat='{0:p0}'}" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="CenterAndExpand" Spacing="20">
+                <Button x:Name="btn_start" WidthRequest="100" Text="Start" Clicked="OnStartClicked" HorizontalOptions="Fill"/>
+                <Button x:Name="btn_cancel" IsEnabled="False"  WidthRequest="100" Text="Cancel" Clicked="OnCancelClicked" HorizontalOptions="Fill"/>
+            </HorizontalStackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
